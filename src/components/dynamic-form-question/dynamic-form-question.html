@@ -1,0 +1,9 @@
+
+  <ion-item [formGroup]="form">
+    
+  <ion-label floating [attr.for]="question.key">{{question.label}}</ion-label>
+
+    <ion-input  [formControlName]="question.key"
+            [id]="question.key" [type]="question.type" type="text"></ion-input>
+
+  </ion-item>

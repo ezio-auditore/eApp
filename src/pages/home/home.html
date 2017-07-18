@@ -1,0 +1,31 @@
+
+<ion-content >
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="diag" style="background-image: url('assets/bg.svg')" [@bounce]='state' >
+      <ion-icon md='md-analytics' color="primary" [@bounce]='state'(@bounce.done)="animationDone()"></ion-icon>
+      </div>
+    <div [@bounce]='state'>
+      <h2>Filing simplified</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, quos. Tenetur officia debitis eveniet quaerat cumque amet! Quis illo, expedita est ad in deserunt quidem veniam, maiores fuga qui repellat!</p>
+    </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background-image: url('assets/bg.svg')" >
+      <ion-icon md='md-thumbs-up' color="primary" [@bounce]='state' ></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+      <h2>Easy Access</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel voluptatem, ut nihil blanditiis asperiores qui sapiente rerum cupiditate distinctio, fuga sequi optio minus harum maiores, in repellendus debitis ipsam eos?</p>
+    </div></ion-slide>
+    <ion-slide>
+      <div class="diag" style="background-image: url('assets/bg.svg')" >
+      <ion-icon md='md-lock' color="primary" [@bounce]='state'></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+      <h2>Secure</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repudiandae explicabo, nesciunt repellat adipisci nulla facere, assumenda quos error architecto! Odit odio illum eius fugiat consectetur et dolor sit dolore.</p>
+    </div></ion-slide>
+  </ion-slides>
+ <button ion-button full   id="skip" (click)="skip()">{{ skipMsg }}</button>
+</ion-content>

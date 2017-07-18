@@ -1,0 +1,18 @@
+<ion-list>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <div *ngFor="let question of questions" >
+      
+      <dynamic-form-question [question]="question" [form]="form"></dynamic-form-question>
+    </div>
+
+    <ion-item >
+      <button type="submit" [disabled]="!form.valid" class="" ion-button full >Save</button>
+    </ion-item>
+  </form>
+
+  <ion-item *ngIf="payLoad" >
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </ion-item>
+  </ion-list>
+
